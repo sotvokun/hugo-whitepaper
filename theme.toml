@@ -1,0 +1,13 @@
+name        = "Whitepaper"
+license     = "MIT"
+licenselink = "https://raw.githubusercontent.com/sotvokun/hugo-whitepaper/master/LICENSE"
+description = "Better feeling for reading"
+homepage    = "https://github.com/sotvokun/hugo-whitepaper"
+min_version = "0.41"
+
+[author]
+    name    = "Sotvokun"
+    homepage= "https://github.com/sotvokun"
+
+[params]
+    version = "0.1"

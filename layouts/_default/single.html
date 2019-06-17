@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>{{.Site.Title}}::{{.Title}}</title>
+
+        {{partial "head.html"}}
+        {{partial "style/major.html"}}
+        {{partial "style/custom.html"}}
+        <link rel="stylesheet" href="{{"/article_page.css" | relURL}}">
+        <link rel="stylesheet" href="{{"/article.css" | relURL}}">
+    </head>
+
+    <body>
+        <div class="container">
+            {{partial "topbar.html" .}}
+
+            <!-- Major Component: info-panel-->
+            <!-- Feature change to Tags-->
+            <div class="info-panel">
+                {{if .Params.tags}}
+                    {{range .Params.tags}}
+                        <span class="article-tag">
+                            <a href="{{path.Join "/tags/" (.|urlize)}}">{{.}}</a>
+                        </span>
+                    {{end}}
+                {{else}}
+                    &nbsp;
+                {{end}}
+            </div>
+
+            <!-- Major Component: article-div -->
+            <div class="article-div">
+                <!-- Title of Post -->
+                <h1>{{.Title}}</h1>
+                <!-- Content -->
+                <article>
+                    {{.Content}}
+                </article>
+                <!-- Information of Post -->
+                <div class="article-info">
+                        {{.Date.Format "2006-01-02"}}
+                        {{range .Params.categories}}
+                            <span class="article-category">
+                                <a href="{{path.Join "/categories/" (.|urlize)}}">{{.}} </a>
+                            </span>
+                        {{end}}
+                </div>
+            </div>
+
+            {{partial "footer.html" .}}
+        </div>
+    </body>
+</html>

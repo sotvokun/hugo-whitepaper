@@ -1,0 +1,20 @@
+@mixin unselectable {
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+// === Color ===
+$color-major: rgb(0, 110, 160);
+$color-minor: rgb(85, 85, 85);
+$color-junior: rgb(160, 160, 160);
+
+
+// === Font ===
+$font-logo: 'Cutive Mono', 'Consolas', 'Courier', monospace;
+$font-monospace: 'Consolas', 'Courier', monospace;
+$font-sans: "Source Han Sans SC", "Source Han Sans", "Microsoft YaHei", "Microsoft YaHei UI", "PingFang SC", "Heiti SC", "Tahoma", "Arial", "San Francisco", "Helvetica", sans-serif;
+
+// === Typographer ===
+$type-great: 20pt;

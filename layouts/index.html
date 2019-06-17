@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>{{.Site.Title}}</title>
+
+        {{partial "head.html"}}
+        {{partial "style/major.html"}}
+        {{partial "style/custom.html"}}
+        <link rel="stylesheet" href="{{"/list.css" | relURL}}">
+    </head>
+
+    <body>
+        <div class="container">
+            {{partial "topbar.html" .}}
+
+            <!-- Major Component: info-panel -->
+            <p class="info-panel">&nbsp;</p>
+
+            <!-- Major Component: post-list -->
+            <div class="post-list">
+                {{$i := "1911"}}
+                {{range .Pages}}
+                    <!-- Year showing -->
+                    {{if ne (.Date.Format "2006") $i}}
+                        {{$i = (.Date.Format "2006")}}
+                        <b class="plist-info-year">{{.Date.Format "2006"}}</b>
+                    {{end}}
+
+                    <!-- Posts showing -->
+                    {{if ne .Type "page"}}
+                    {{if ne .Params.hidden 1}}          <!-- Hide the post you don't want show -->
+                        <!-- Post Item showing -->
+                        {{partial "pitem.html" .}}
+                    {{end}}
+                    {{end}}
+                {{end}}
+            </div>
+
+            {{partial "footer.html" .}}
+        </div>
+    </body>
+</html>

@@ -1,0 +1,27 @@
+@import 'definition';
+
+.article-tag {
+    a {
+        color: $color-junior;
+    }
+    a::before{
+        content: "#"
+    }
+}
+
+.article-info {
+    @include unselectable;
+    margin: 4% 0;
+
+    text-align: center;
+    color: lightgray;
+}
+
+.article-category {
+    a {
+        color: $color-junior;
+    }
+    a::before {
+        content: "/";
+    }
+}

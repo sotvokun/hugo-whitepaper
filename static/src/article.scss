@@ -1,0 +1,82 @@
+@import 'definition';
+
+// === CODE ===
+article>*code {
+    font-family: $font-monospace;
+}
+
+pre {
+    border: black solid 1px;
+    padding: 1.5%;
+
+    overflow-x: auto;
+}
+
+// === Table ===
+table, th, td {
+    border-collapse: collapse;
+    border: black solid 1px;
+}
+
+table {
+    width: 100%;
+    
+    text-align: center;
+}
+
+// === KEYBOARD ===
+kbd>kbd {
+    color: white;
+    background-color: #272822;
+
+    font-family: $font-monospace;
+
+    padding: 0 0.5%;
+    margin: 0 0.5%;
+}
+
+// === FOOTNOTE ===
+// REF
+sup {
+    padding-left: 2px;
+    a {
+        font-style: normal;
+    }
+    a::before {
+        content: '[';
+    }
+    a::after {
+        content: ']';
+    }
+}
+
+// === HR ===
+hr {
+    border: none;
+    border-bottom: $color-junior solid 1px;
+}
+
+// === BLOCKQUOTE ===
+blockquote {
+    border-left: black solid 1px;
+
+    margin: 0;
+    padding-left: 3%;
+}
+
+// === IMAGE ===
+img {
+    width: 100%;
+}
+
+// === Typographer ===
+p {
+    line-height: 1.6rem;
+    text-align: justify;
+}
+
+@media screen and (max-width:700px) {
+    p {
+        text-align: initial;
+    }
+}

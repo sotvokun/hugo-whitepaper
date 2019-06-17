@@ -1,0 +1,27 @@
+@import 'definition';
+
+body {
+    display: flex;
+    justify-content: center;
+
+    font-family: $font-sans;
+}
+
+.container {
+    width: 100%;
+    max-width: 38rem;
+}
+
+.info-panel {
+    margin: 0 0 10px;
+    @include unselectable;
+}
+
+a {
+    color: $color-major;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

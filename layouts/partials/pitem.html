@@ -1,0 +1,28 @@
+<!-- Combinative Component: pitem -->
+<div class="pitem">
+    <!--LEFT-->
+    <div class="left">
+        <!-- date -->
+        <span class="pitem-date">{{.Date.Format "2006-01-02"}}</span>
+        <!-- title -->
+        <span class="pitem-title">
+            <a href="{{.Permalink | relURL}}">{{.Title}}</a>
+        </span>
+        <!-- category -->
+        {{range .Params.categories}}
+            <span class="pitem-category">
+                <a href="{{path.Join "/categories/" (.|urlize)}}">{{.}}</a>
+            </span>
+        {{end}}
+    </div>
+    
+    <!--RIGHT-->
+    <div class="right">
+        <!-- tag -->
+        {{range .Params.tags}}
+            <span class="pitem-tag">
+                <a href="{{path.Join "/tags/" (.|urlize)}}">{{.}}</a>
+            </span>
+        {{end}}
+    </div>
+</div>
