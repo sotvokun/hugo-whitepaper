@@ -10,8 +10,8 @@
 
         {{$style_article_page := resources.Get "/sass/article_page.scss" | resources.ToCSS | resources.Minify}}
         {{$style_article := resources.Get "/sass/article.scss" | resources.ToCSS | resources.Minify}}
-        <link rel="stylesheet" type="text/css" href="{{$style_article_page | relURL}}">
-        <link rel="stylesheet" type="text/css" href="{{$style_article | relURL}}">
+        <link rel="stylesheet" type="text/css" href="{{$style_article_page.Permalink | relURL}}">
+        <link rel="stylesheet" type="text/css" href="{{$style_article.Permalink | relURL}}">
     </head>
 
     <body>
