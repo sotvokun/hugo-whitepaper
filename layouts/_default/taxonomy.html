@@ -7,7 +7,9 @@
         {{partial "head.html"}}
         {{partial "style/major.html"}}
         {{partial "style/custom.html"}}
-        <link rel="stylesheet" type="text/css" href="{{"/list.css" | absURL}}">
+        
+        {{$style_list := resources.Get "/sass/list.scss" | resources.ToCSS | resources.Minify}}
+        <link rel="stylesheet" type="text/css" href="{{ $style_list.Permalink | relURL}}">
     </head>
 
     <body>

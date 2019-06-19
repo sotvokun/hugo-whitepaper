@@ -1,2 +1,5 @@
-<link rel="stylesheet" type="text/css" href="{{ "/master.css" | absURL }}">
-<link rel="stylesheet" type="text/css" href="{{ "/topbar_footer.css" | absURL }}">
+{{$style_master := resources.Get "/sass/master.scss" | resources.ToCSS | resources.Minify}}
+{{$style_topbarfooter := resources.Get "/sass/topbar_footer.scss" | resources.ToCSS | resources.Minify}}
+
+<link rel="stylesheet" type="text/css" href="{{ $style_master.Permalink | relURL }}">
+<link rel="stylesheet" type="text/css" href="{{ $style_topbarfooter.Permalink | relURL }}">

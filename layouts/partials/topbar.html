@@ -9,7 +9,7 @@
     <ul class="tb-navbar">
         {{range .Site.RegularPages}}
             {{if eq .Type "page"}}
-                <li><a href="{{.Permalink | absURL}}">{{.Title}}</a></li>
+                <li><a href="{{.Permalink | relURL}}">{{.Title}}</a></li>
             {{end}}
         {{end}}
     </ul>
