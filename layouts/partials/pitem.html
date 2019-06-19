@@ -6,7 +6,7 @@
         <span class="pitem-date">{{.Date.Format "2006-01-02"}}</span>
         <!-- title -->
         <span class="pitem-title">
-            <a href="{{.Permalink | relURL}}">{{.Title}}</a>
+            <a href="{{.Permalink | absURL}}">{{.Title}}</a>
         </span>
         <!-- category -->
         {{range .Params.categories}}
