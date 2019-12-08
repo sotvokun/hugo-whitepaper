@@ -22,7 +22,7 @@
             <!-- Major Component: post-list -->
             <div class="post-list">
                 {{$i := "1911"}}
-                {{range .Pages}}
+                {{range .Site.RegularPages}}
                     <!-- Year showing -->
                     {{if ne (.Date.Format "2006") $i}}
                         {{$i = (.Date.Format "2006")}}
