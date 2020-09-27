@@ -10,4 +10,4 @@ min_version = "0.41"
     homepage= "https://github.com/sotvokun"
 
 [params]
-    version = "1.0"
+    version = "1.0.1"
