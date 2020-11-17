@@ -4,6 +4,7 @@ Whitepaper is a theme of hugo the static site generator.
 ## Changelog
 - [2019-06-18] Using the pipe to process the `scss` files. Don't need sassc anymore. **update to 1.0**
 - [2020-09-27] Fix monospace display in Firefox on Windows.
+- [2020-11-17] Switch the place of tag and category in list page.
 
 ## Usage
 1. Use `git clone` to install the theme into Hugo theme folder.
