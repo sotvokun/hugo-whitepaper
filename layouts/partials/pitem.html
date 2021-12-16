@@ -8,20 +8,14 @@
         <span class="pitem-title">
             <a href="{{.Permalink | relURL}}">{{.Title}}</a>
         </span>
-        <!-- tag -->
-        {{range .Params.tags}}
-            <span class="pitem-tag">
-                <a href="{{path.Join "/tags/" (.|urlize)}}">{{.}}</a>
-            </span>
-        {{end}}
     </div>
     
     <!--RIGHT-->
     <div class="right">
-        <!-- category -->
-        {{range .Params.categories}}
-            <span class="pitem-category">
-                <a href="{{path.Join "/categories/" (.|urlize)}}">{{.}}</a>
+        <!-- tag -->
+        {{range .Params.tags}}
+            <span class="pitem-tag">
+                <a href="{{path.Join "/tags/" (.|urlize)}}">{{.}}</a>
             </span>
         {{end}}
     </div>
